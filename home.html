@@ -31,6 +31,7 @@
         background-color: #ddd;
         color: black;
       }
+
       /*apartrir de aca es nuevo XDDXXD*/
 
       header {
@@ -38,6 +39,7 @@
         display: flex;
         flex-wrap: wrap-reverse;
       }
+
       .welcome,
       .welcome_text {
         width: 50%;
@@ -46,16 +48,19 @@
       .welcome img {
         width: 100%;
       }
+
       .welcome_text {
         flex-direction: column;
         display: flex;
         align-items: center;
         font-size: 30px;
       }
+
       .welcome_text p {
         text-align: start;
         font-size: 20px;
       }
+
       #mostrarTexto {
         color: #333;
         width: 100%;
@@ -64,13 +69,16 @@
         border: 2px solid #333;
         transition: 0.5s;
       }
+
       #mostrarTexto:hover {
         cursor: pointer;
         transform: scale(0.97);
       }
+
       .descuento {
         text-align: center;
       }
+
       footer {
         background-color: #333;
         color: white;
@@ -80,20 +88,33 @@
         bottom: 0;
         width: 100%;
       }
+
       footer a {
         color: white;
         text-decoration: none;
         transition: 0.5s;
       }
+
       footer a:hover {
         color: cadetblue;
       }
+
       @media (max-width: 768px) {
         .welcome,
         .welcome_text {
           width: 100%;
           height: 100%;
         }
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
       }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -132,18 +153,18 @@
       });
     </script>
   </head>
+
   <body>
     <!--navbar-->
     <nav class="navbar">
       <a href="home.html"><i class="fas fa-home"></i> Inicio</a>
       <a href="index.html"><i class="fas fa-store"></i> Tienda</a>
-      <a href="./contacto.html"
-        ><i class="fas fa-shopping-cart"></i> Contacto</a
-      >
+      <a href="contacto.html"><i class="fas fa-shopping-cart"></i> Contacto</a>
       <a href="login.html"><i class="fas fa-user"></i>Login</a>
       <a href="about.html"
         ><i class="fas fa-info-circle"></i> Acerca de nosotros</a
       >
+      <a href="Preguntas-frecuentes.html">Preguntas frecuentes</a>
     </nav>
     <header>
       <section class="welcome">
