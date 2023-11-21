@@ -41,6 +41,23 @@
         max-width: 600px;
         text-align: left;
       }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      footer a {
+        color: white;
+        text-decoration: none;
+        transition: 0.5s;
+      }
+      footer a:hover {
+        color: cadetblue;
+      }
 
       #changeColorBtn {
         color: #333;
@@ -94,6 +111,10 @@
 
       <button id="changeColorBtn">Cambiar Color de Fondo</button>
     </div>
+    <footer>
+      &copy; 2023 Tienda de Camisas
+      <div><a href="./ayuda.html">Necesitas ayuda??</a></div>
+    </footer>
 
     <script>
       $(document).ready(function () {

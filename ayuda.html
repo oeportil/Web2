@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayuda</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      .navbar {
+        background-color: #333;
+        overflow: hidden;
+      }
+
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+      }
+
+      section {
+        margin: 20px;
+      }
+
+      .faq-question {
+        cursor: pointer;
+        background-color: #ddd;
+        padding: 10px;
+        margin-bottom: 5px;
+      }
+
+      .faq-answer {
+        display: none;
+        padding: 10px;
+        background-color: #fff;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        z-index: -1;
+        bottom: 0;
+        width: 100%;
+      }
+      footer a {
+        color: white;
+        text-decoration: none;
+        transition: 0.5s;
+      }
+      footer a:hover {
+        color: cadetblue;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i> Inicio</a>
+      <a href="index.html"><i class="fas fa-store"></i> Tienda</a>
+      <a href="#"><i class="fas fa-shopping-cart"></i> Carrito</a>
+      <a href="login.html"><i class="fas fa-user"></i>Login</a>
+      <a href="about.html"
+        ><i class="fas fa-info-circle"></i> Acerca de nosotros</a
+      >
+    </nav>
+    <header>
+      <h1>Página de Ayuda</h1>
+    </header>
+
+    <section>
+      <h2>Preguntas Frecuentes</h2>
+
+      <div class="faq-question">¿Cómo puedo contactar al soporte?</div>
+      <div class="faq-answer">
+        Puedes contactar al soporte enviando un correo electrónico a
+        support@example.com.
+      </div>
+
+      <div class="faq-question">¿Cómo restablezco mi contraseña?</div>
+      <div class="faq-answer">
+        Para restablecer tu contraseña, ve a la página de inicio de sesión y haz
+        clic en "Olvidé mi contraseña".
+      </div>
+
+      <div class="faq-question">¿Cómo puedo comprar una camisa?</div>
+      <div class="faq-answer">
+        Debes ir a la sección Tienda que se encuentra en la barra de navegación
+        y presionar en el boton añadir al carrito.
+      </div>
+      <div class="faq-question">¿Quienes realizaron esta pagina?</div>
+      <div class="faq-answer">
+        <strong>Esta pagina fue realizada por:<br /></strong>
+        Kevin Daniel Rodriguez Martinez <br />
+        Oscar Ernesto Portillo Ceron Bryan<br />
+        Alberto Vásquez Farfán
+      </div>
+    </section>
+    <footer>
+      &copy; 2023 Tienda de Camisas
+      <div><a href="./ayuda.html">Necesitas ayuda??</a></div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Agrega un evento de clic a las preguntas frecuentes para mostrar/ocultar las respuestas
+        $(".faq-question").click(function () {
+          $(this).next(".faq-answer").slideToggle();
+        });
+      });
+    </script>
+  </body>
+</html>
