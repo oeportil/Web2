@@ -1,221 +1,209 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página de Camisas</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-      }
 
-      .navbar {
-        background-color: #333;
-        overflow: hidden;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de Camisas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
 
-      .navbar a {
-        float: left;
-        display: block;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+    }
 
-      .navbar a:hover {
-        background-color: #ddd;
-        color: black;
-      }
+    .navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
 
-      .shirt {
-        display: inline-block;
-        margin: 20px;
-        border: 1px solid #ccc;
-        padding: 10px;
-        width: 200px;
-        background-color: #f9f9f9;
-        border-radius: 8px;
-      }
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
 
-      .shirt img {
-        max-width: 100%;
-      }
+    .shirt {
+      display: inline-block;
+      margin: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 200px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+    }
 
-      button.add-to-cart {
-        background-color: #4caf50;
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        transition-duration: 0.4s;
-        border-radius: 4px;
-      }
+    .shirt img {
+      max-width: 100%;
+    }
 
-      button.add-to-cart:hover {
-        background-color: white;
-        color: black;
-        border: 1px solid #4caf50;
-      }
+    button.add-to-cart {
+      background-color: #4caf50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      transition-duration: 0.4s;
+      border-radius: 4px;
+    }
 
-      .remove-from-cart {
-        background-color: #ff5733;
-        border: none;
-        color: white;
-        padding: 5px 10px;
-        font-size: 12px;
-        cursor: pointer;
-        border-radius: 4px;
-        margin-top: 5px;
-      }
+    button.add-to-cart:hover {
+      background-color: white;
+      color: black;
+      border: 1px solid #4caf50;
+    }
 
-      .remove-from-cart:hover {
-        background-color: white;
-        color: #ff5733;
-        border: 1px solid #ff5733;
-      }
+    .remove-from-cart {
+      background-color: #ff5733;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
 
-      #cart {
-        border: 1px solid #ccc;
-        padding: 20px;
-        width: 300px;
-        margin: 20px auto;
-        text-align: left;
-        border-radius: 8px;
-      }
+    .remove-from-cart:hover {
+      background-color: white;
+      color: #ff5733;
+      border: 1px solid #ff5733;
+    }
 
-      #cart-items {
-        list-style-type: none;
-        padding: 0;
-      }
+    #cart {
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 300px;
+      margin: 20px auto;
+      text-align: left;
+      border-radius: 8px;
+    }
 
-      #cart-total {
-        font-weight: bold;
-      }
+    #cart-items {
+      list-style-type: none;
+      padding: 0;
+    }
 
-      footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 10px;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-      }
-      footer a:hover {
-        color: cadetblue;
-      }
-      footer a {
-        color: white;
-        text-decoration: none;
-        transition: 0.5s;
-      }
-    </style>
-  </head>
+    #cart-total {
+      font-weight: bold;
+    }
 
-  <body>
-    <div class="navbar">
-      <a href="home.html"><i class="fas fa-home"></i> Inicio</a>
-      <a href="index.html"><i class="fas fa-store"></i> Tienda</a>
-      <a href="#"><i class="fas fa-shopping-cart"></i> Carrito</a>
-      <a href="login.html"><i class="fas fa-user"></i>Login</a>
-      <a href="about.html"
-        ><i class="fas fa-info-circle"></i> Acerca de nosotros</a
-      >
-    </div>
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
 
-    <h1>Nuestras Camisas</h1>
+    footer a:hover {
+      color: cadetblue;
+    }
 
-    <div class="shirt" id="shirt1">
-      <img
-        src="https://m.media-amazon.com/images/I/41vSnsRpPgL._AC_SX679._SX._UX._SY._UY_.jpg"
-        alt="Camisa 1"
-      />
-      <h2>Camisa 1</h2>
-      <p>Precio: $20</p>
-      <button class="add-to-cart" data-price="20">Añadir al Carrito</button>
-    </div>
+    footer a {
+      color: white;
+      text-decoration: none;
+      transition: 0.5s;
+    }
+  </style>
+</head>
 
-    <div class="shirt" id="shirt2">
-      <img
-        src="https://m.media-amazon.com/images/I/71fT-tdCUdL._AC_SX679._SX._UX._SY._UY_.jpg"
-        alt="Camisa 2"
-      />
-      <h2>Camisa 2</h2>
-      <p>Precio: $25</p>
-      <button class="add-to-cart" data-price="25">Añadir al Carrito</button>
-    </div>
+<body>
+  <div class="navbar">
+    <a href="home.html"><i class="fas fa-home"></i> Inicio</a>
+    <a href="index.html"><i class="fas fa-store"></i> Tienda</a>
+    <a href="#"><i class="fas fa-shopping-cart"></i> Carrito</a>
+    <a href="login.html"><i class="fas fa-user"></i>Login</a>
+    <a href="about.html" <a href="Preguntas-frecuentes.html">Preguntas frecuentes</a>
+    ><i class="fas fa-info-circle"></i> Acerca de nosotros</a>
+  </div>
 
-    <div class="shirt" id="shirt3">
-      <img
-        src="https://m.media-amazon.com/images/I/71HLsNVJB4L._AC_SX679._SX._UX._SY._UY_.jpg"
-        alt="Camisa 3"
-      />
-      <h2>Camisa 3</h2>
-      <p>Precio: $30</p>
-      <button class="add-to-cart" data-price="30">Añadir al Carrito</button>
-    </div>
-    <div class="shirt" id="shirt3">
-      <img
-        src="https://m.media-amazon.com/images/I/81CHVayaxwL._AC_SX679._SX._UX._SY._UY_.jpg"
-        alt="Camisa 3"
-      />
-      <h2>Camisa 3</h2>
-      <p>Precio: $30</p>
-      <button class="add-to-cart" data-price="30">Añadir al Carrito</button>
-    </div>
+  <h1>Nuestras Camisas</h1>
 
-    <div id="cart">
-      <h2>Carrito de Compras</h2>
-      <ul id="cart-items"></ul>
-      <h3>Total: $<span id="cart-total">0</span></h3>
-    </div>
+  <div class="shirt" id="shirt1">
+    <img src="https://m.media-amazon.com/images/I/41vSnsRpPgL._AC_SX679._SX._UX._SY._UY_.jpg" alt="Camisa 1" />
+    <h2>Camisa 1</h2>
+    <p>Precio: $20</p>
+    <button class="add-to-cart" data-price="20">Añadir al Carrito</button>
+  </div>
 
-    <footer>
-      &copy; 2023 Tienda de Camisas
-      <div><a href="./ayuda.html">Necesitas ayuda??</a></div>
-    </footer>
+  <div class="shirt" id="shirt2">
+    <img src="https://m.media-amazon.com/images/I/71fT-tdCUdL._AC_SX679._SX._UX._SY._UY_.jpg" alt="Camisa 2" />
+    <h2>Camisa 2</h2>
+    <p>Precio: $25</p>
+    <button class="add-to-cart" data-price="25">Añadir al Carrito</button>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        let total = 0;
+  <div class="shirt" id="shirt3">
+    <img src="https://m.media-amazon.com/images/I/71HLsNVJB4L._AC_SX679._SX._UX._SY._UY_.jpg" alt="Camisa 3" />
+    <h2>Camisa 3</h2>
+    <p>Precio: $30</p>
+    <button class="add-to-cart" data-price="30">Añadir al Carrito</button>
+  </div>
+  <div class="shirt" id="shirt3">
+    <img src="https://m.media-amazon.com/images/I/81CHVayaxwL._AC_SX679._SX._UX._SY._UY_.jpg" alt="Camisa 3" />
+    <h2>Camisa 3</h2>
+    <p>Precio: $30</p>
+    <button class="add-to-cart" data-price="30">Añadir al Carrito</button>
+  </div>
 
-        $(".add-to-cart").click(function () {
-          const price = $(this).data("price");
-          total += price;
-          $("#cart-items").append(
-            "<li>Camisa - $" +
-              price +
-              ' <button class="remove-from-cart">Eliminar</button></li>'
-          );
-          $("#cart-total").text(total);
-        });
+  <div id="cart">
+    <h2>Carrito de Compras</h2>
+    <ul id="cart-items"></ul>
+    <h3>Total: $<span id="cart-total">0</span></h3>
+  </div>
 
-        $("#cart-items").on("click", ".remove-from-cart", function () {
-          const price = parseFloat(
-            $(this)
-              .closest("li")
-              .text()
-              .match(/\d+(\.\d+)?/)[0]
-          );
-          total -= price;
-          $(this).closest("li").remove();
-          $("#cart-total").text(total);
-        });
+  <footer>
+    &copy; 2023 Tienda de Camisas
+    <div><a href="./ayuda.html">Necesitas ayuda??</a></div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      let total = 0;
+
+      $(".add-to-cart").click(function () {
+        const price = $(this).data("price");
+        total += price;
+        $("#cart-items").append(
+          "<li>Camisa - $" +
+          price +
+          ' <button class="remove-from-cart">Eliminar</button></li>'
+        );
+        $("#cart-total").text(total);
       });
-    </script>
-  </body>
+
+      $("#cart-items").on("click", ".remove-from-cart", function () {
+        const price = parseFloat(
+          $(this)
+            .closest("li")
+            .text()
+            .match(/\d+(\.\d+)?/)[0]
+        );
+        total -= price;
+        $(this).closest("li").remove();
+        $("#cart-total").text(total);
+      });
+    });
+  </script>
+</body>
+
 </html>
